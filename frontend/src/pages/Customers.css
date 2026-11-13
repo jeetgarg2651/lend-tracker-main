@@ -1,0 +1,241 @@
+
+.customer-section {
+    background: #fff;
+    border: 1px solid #e9edf4;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.customer-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.customer-section-heading h2 {
+    font-size: 18px;
+    margin: 0 0 7px;
+}
+
+.customer-section-heading p {
+    color: #929bad;
+    font-size: 13px;
+    margin: 0;
+}
+
+.customer-section-heading button {
+    background: #5268e8;
+    color: #fff;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.customer-section-heading button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.customer-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.customer-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.customer-table th {
+    background: #f5f7fb;
+    color: #7b8497;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.customer-table td {
+    padding: 17px 15px;
+    border-bottom: 1px solid #edf0f5;
+    font-size: 13px;
+    color: #39445a;
+    white-space: nowrap;
+}
+
+.customer-status {
+    padding: 6px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.customer-status.active {
+    background: #e5f8ed;
+    color: #21864c;
+}
+
+.customer-status.inactive {
+    background: #fff0f0;
+    color: #d14c4c;
+}
+
+.customer-action-btn {
+    background: #eef0ff;
+    color: #5268e8;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.customer-action-btn:hover {
+    background: #dfe3ff;
+}
+
+.customer-empty {
+    text-align: center;
+    padding: 55px 15px;
+}
+
+.customer-empty h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.customer-empty p {
+    color: #929bad;
+    font-size: 13px;
+}
+
+.customer-error {
+    padding: 15px;
+    background: #fff0f0;
+    color: #c03939;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.customer-error button {
+    margin-left: 12px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+@media (max-width: 650px) {
+    .customer-section {
+        padding: 15px;
+    }
+
+    .customer-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+.customer-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.customer-modal {
+    background: #fff;
+    width: 100%;
+    max-width: 520px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.customer-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.customer-modal-header h2 {
+    font-size: 19px;
+    margin: 0;
+    color: #25304a;
+}
+
+.customer-modal-header button {
+    border: none;
+    background: #f1f3f8;
+    color: #39445a;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .customer-modal {
+        padding: 18px;
+    }
+}
+
+.customer-action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.customer-edit-btn {
+    background: #e8f1ff;
+    color: #2864bd;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.customer-edit-btn:hover {
+    background: #d5e6ff;
+}
+
+.customer-search {
+    width: 260px;
+    padding: 11px 14px;
+    border: 1px solid #dfe3eb;
+    border-radius: 7px;
+    font-size: 13px;
+    outline: none;
+    color: #39445a;
+    box-sizing: border-box;
+}
+
+.customer-search:focus {
+    border-color: #5268e8;
+    box-shadow: 0 0 0 3px rgba(82, 104, 232, 0.1);
+}
+
+.customer-search::placeholder {
+    color: #a0a8b8;
+}
+
+@media (max-width: 650px) {
+    .customer-search {
+        width: 100%;
+    }
+}

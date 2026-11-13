@@ -4,6 +4,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 
 const authRoutes = require("./routes/auth.routes");
+const customerRoutes = require("./routes/customer.routes");
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.get("/health", (req, res) => {
 
 // Authentication routes
 app.use("/api/auth", authRoutes);
+app.use("/api/customers", customerRoutes);
 
 // 404 handler
 app.use((req, res) => {
@@ -37,7 +39,7 @@ app.use((req, res) => {
 
 // Global error handler
 app.use((err, req, res, next) => {
-    console.error("Server Error:", err.message);
+    console.error("Server Error:", err.message, "StatusCode:", err.statusCode);
 
     res.status(err.statusCode || 500).json({
         success: false,

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./component/auth/login";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./component/auth/ProtectedRoute";
+import Customers from "./pages/Customer";
 
 function App() {
     return (
@@ -19,6 +20,15 @@ function App() {
                         </ProtectedRoute>
                     }
                 />
+
+                <Route
+    path="/customers"
+    element={
+        <ProtectedRoute>
+            <Customers />
+        </ProtectedRoute>
+    }
+/>
 
                 <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>

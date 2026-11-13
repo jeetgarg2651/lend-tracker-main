@@ -1,0 +1,71 @@
+.customer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.customer-form label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #39445a;
+    margin-top: 8px;
+}
+
+.customer-form input,
+.customer-form textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #dfe3eb;
+    border-radius: 7px;
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.customer-form input:focus,
+.customer-form textarea:focus {
+    border-color: #5268e8;
+}
+
+.customer-form textarea {
+    resize: vertical;
+}
+
+.customer-form-error {
+    background: #fff0f0;
+    color: #c03939;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.customer-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.customer-form-actions button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.customer-form-actions button:first-child {
+    background: #eef0f5;
+    color: #39445a;
+}
+
+.customer-form-actions button:last-child {
+    background: #5268e8;
+    color: white;
+}
+
+.customer-form-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
